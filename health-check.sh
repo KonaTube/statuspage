@@ -3,10 +3,11 @@
 # later upstream merges messy for anyone who forked us.
 commit=true
 origin=$(git remote get-url origin)
-if [[ $origin == *statsig-io/statuspage* ]]
+if [[ $origin == *KonaTube/statuspage* ]]
 then
-  commit=false
+  commit=true
 fi
+
 
 KEYSARRAY=()
 URLSARRAY=()
@@ -59,8 +60,8 @@ done
 if [[ $commit == true ]]
 then
   # Let's make Vijaye the most productive person on GitHub.
-  git config --global user.name 'Vijaye Raji'
-  git config --global user.email 'vijaye@statsig.com'
+  git config --global user.name 'danil2201'
+  git config --global user.email 'vfgvbvhg@yandex.ru'
   git add -A --force logs/
   git commit -am '[Automated] Update Health Check Logs'
   git push
